@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Gamer Topup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-header">
+            <i class="fa-solid fa-user"></i>
+            <h2>เข้าสู่ระบบ</h2>
+        </div>
+        <form class="login-form">
+            <label for="username"></label>
+            <input type="text" id="username" placeholder="ชื่อผู้ใช้" required>
+
+            <div class="field-with-toggle">
+                <label for="password"></label>
+                <input type="password" id="password" placeholder="รหัสผ่าน" required>
+                <button type="button" id="togglePassword" class="toggle-btn">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+
+            <label class="remember-label">
+                <input type="checkbox" id="rememberMe"> จดจำฉัน
+            </label>
+
+            <button type="submit" class="btn-primary">เข้าสู่ระบบ</button>
+            <button type="button" id="gotoSignup" class="btn-secondary">สมัครสมาชิก</button>
+        </form>
+        <div id="loginAlert"></div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

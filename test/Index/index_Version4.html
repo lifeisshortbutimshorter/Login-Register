@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Gamer Topup - เติมเกมสุดเท่</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="index_Version4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gamer-header">
+            <i class="fa-solid fa-gamepad"></i>
+            <h2>Pun's TopUp</h2>
+            <p>ระบบเติมเกมสุดเท่ สำหรับสายเกมเมอร์!</p>
+            <p>เติมเกมง่ายๆ แค่ไม่กี่คลิก</p>
+            <p>รับเพชร/ไอเท็มภายใน 10 นาที</p>
+        </div>
+        <form id="topupForm">
+            <label for="game">เลือกเกม</label>
+            <select id="game" required>
+                <option value="">-- เลือกเกม --</option>
+                <option value="ROV" data-icon='<i class="fa-solid fa-chess-knight"></i>'>🛡️ ROV</option>
+                <option value="FreeFire" data-icon='<i class="fa-solid fa-fire"></i>'>🔥 Free Fire</option>
+                <option value="PUBG Mobile" data-icon='<i class="fa-solid fa-person-military-rifle"></i>'>🎯 PUBG Mobile</option>
+                <option value="Genshin Impact" data-icon='<i class="fa-solid fa-wind"></i>'>🌌 Genshin Impact</option>
+                <option value="Honkai Star rail" data-icon='<i class="fa-solid fa-train"></i>'>🚄 Honkai Star rail</option>
+                <option value="Roblox" data-icon='<i class="fa-brands fa-roblox"></i>'>🧱 Roblox</option>
+            </select>
+            <label for="uid">UID / รหัสผู้เล่น</label>
+            <input type="text" id="uid" required placeholder="กรอก UID หรือรหัสผู้เล่น">
+            <label for="amount">ยอดเงินที่ต้องการเติม (บาท)</label>
+            <input type="number" id="amount" min="10" max="5000" required placeholder="เช่น 100">
+            <label for="payment">ช่องทางรับโอน</label>
+            <select id="payment" required>
+                <option value="">-- เลือกช่องทาง --</option>
+                <option value="PromptPay">PromptPay</option>
+                <option value="TrueMoney Wallet">TrueMoney Wallet</option>
+                <option value="ธนาคาร">ธนาคาร</option>
+            </select>
+            <button type="submit"><i class="fa-solid fa-bolt"></i> ยืนยันการเติม</button>
+        </form>
+        <div id="result" class="result" style="display:none"></div>
+    </div>
+    <script src="index_Version4.js"></script>
+</body>
+</html>
